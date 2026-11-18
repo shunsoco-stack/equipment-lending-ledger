@@ -1,0 +1,293 @@
+/* ホーム・集計カード */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.summary {
+  background: white;
+  border: 1px solid var(--line);
+  padding: 21px 24px 17px;
+  border-radius: 9px;
+}
+
+.summary > span {
+  font-size: 12px;
+  color: #647872;
+}
+
+.summary > strong {
+  display: block;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.55;
+}
+
+.summary strong small {
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #89958f;
+}
+
+.summary p {
+  font-size: 10px;
+  color: #8a9690;
+  margin: 3px 0 0;
+}
+
+.overdue-summary {
+  background: #fffcfa;
+  border-color: #edd8cf;
+}
+
+.overdue-summary > strong,
+.overdue-summary > span,
+.overdue-summary p {
+  color: var(--danger);
+}
+
+.overdue-banner {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 18px 22px;
+  margin-bottom: 35px;
+  border: 1px solid #efddd1;
+  background: #fff8f2;
+  border-radius: 8px;
+  color: #a8613e;
+}
+
+.overdue-banner strong {
+  font-size: 13px;
+}
+
+.overdue-banner small {
+  display: block;
+  font-size: 11px;
+  color: #aa826b;
+  margin-top: 3px;
+}
+
+.warning-mark {
+  border: 1.5px solid #bd865c;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.banner-link {
+  margin-left: auto;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.section-heading h2 {
+  margin: 0;
+}
+
+.section-heading .text-link {
+  font-size: 12px;
+}
+
+.count {
+  display: inline-block;
+  background: #e8edeb;
+  color: #788680;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 1px 8px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  background: #eaf0ed;
+  border-radius: 7px;
+  padding: 4px;
+}
+
+.tabs button {
+  border: 0;
+  background: transparent;
+  color: #7a8882;
+  font-size: 12px;
+  padding: 7px 19px;
+  min-height: 44px;
+}
+
+.tabs button.selected {
+  background: white;
+  color: var(--accent);
+  box-shadow: 0 1px 4px #203a3010;
+}
+
+.search {
+  width: 290px;
+  max-width: 100%;
+  font-size: 12px;
+}
+
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.item-card {
+  padding: 20px 21px 0;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  min-width: 0;
+  transition: box-shadow 0.18s;
+}
+
+.item-card:hover {
+  box-shadow: 0 5px 18px #23443c0a;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.equipment-symbol {
+  width: 40px;
+  height: 40px;
+  background: #edf3f1;
+  color: #718981;
+  border-radius: 9px;
+  font-size: 28px;
+  display: grid;
+  place-items: center;
+  line-height: 1;
+}
+
+.badge {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  padding: 3px 9px;
+  font-size: 10px;
+  border-radius: 5px;
+  background: #eef1f0;
+  color: #7a8882;
+  white-space: nowrap;
+}
+
+.badge span {
+  font-size: 7px;
+}
+
+.badge.available {
+  color: #438775;
+  background: #edf7f0;
+}
+
+.badge.lent {
+  color: #4c7f9e;
+  background: #edf4f9;
+}
+
+.badge.danger {
+  color: #b85e49;
+  background: #fff0ea;
+}
+
+.item-code {
+  color: #99a19d;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  margin-bottom: 3px;
+}
+
+.item-card h3 {
+  margin: 0 0 5px;
+}
+
+.item-card h3 a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.item-location {
+  font-size: 10px;
+  color: #8b9690;
+  margin-bottom: 17px;
+}
+
+.item-location span {
+  color: #d0d7d3;
+  margin-inline: 4px;
+}
+
+.card-loan {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border-top: 1px solid #edf0ee;
+  font-size: 11px;
+}
+
+.card-loan small {
+  display: block;
+  font-size: 10px;
+}
+
+.small-avatar {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #eeeae2;
+  color: #93846a;
+  font-size: 10px;
+  flex-shrink: 0;
+}
+
+.card-action {
+  margin-left: auto;
+  color: var(--accent);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding-left: 6px;
+  white-space: nowrap;
+}

@@ -1,0 +1,9 @@
+/* 画面別スタイルを順に読み込む */
+@import "../styles/base.css";
+@import "../styles/shell.css";
+@import "../styles/home.css";
+@import "../styles/forms.css";
+@import "../styles/history.css";
+@import "../styles/feedback.css";
+@import "../styles/responsive.css";
+@import "../styles/print.css";

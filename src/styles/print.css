@@ -1,0 +1,80 @@
+/* QRラベルの単票印刷 */
+@media print {
+  body {
+    background: white;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .print-label,
+  .print-label * {
+    visibility: visible;
+  }
+
+  .print-label {
+    position: absolute;
+    top: 12mm;
+    left: 12mm;
+    width: 75mm;
+    border: 1px solid #bbb;
+    padding: 5mm;
+    text-align: center;
+    break-inside: avoid;
+  }
+
+  .print-label h2 {
+    font-size: 12pt;
+  }
+
+  .print-label svg {
+    width: 55mm;
+    height: 55mm;
+  }
+
+  .sidebar,
+  .topbar,
+  .mobile-tabs,
+  footer,
+  .skip-link {
+    display: none;
+  }
+
+  .main-area {
+    margin: 0;
+    width: 100%;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  main > :not(.detail-grid),
+  .detail-grid > :not(.qr-panel),
+  .qr-panel > :not(.print-label) {
+    display: none;
+  }
+
+  .detail-grid {
+    display: block;
+  }
+
+  .qr-panel {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  @page {
+    margin: 0;
+    size: A4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
